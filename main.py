@@ -36,16 +36,20 @@ if __name__ == '__main__':
     print(f'----- ListAllWords -----')
 
     # a_string = 'абвгдеёжзийклмнопрстуфхцчшщьыъэюя'
-    a_string = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+    # a_string = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+    a_string = 'qwertyuiopasdfghjklzxcvbnm'
     # a_string = '01'
     # a_string = 'йухи'
     alphabet = [a_string[i] for i in range(0, len(a_string))]
-    min_word_len = 6
+    min_word_len = 1
     max_word_len = 6
+    # start_from = ['h']
+    start_from = ['e','e','n','g','s','m']
 
     # words = old_list_all_words(alphabet, min_word_len, max_word_len)
     words = ListAllWords(
         alphabet, min_word_len, max_word_len, reduce_to_str=True
+        , start_from=start_from
     )
     for word_a in words:
         print(word_a)
