@@ -43,7 +43,7 @@ if __name__ == '__main__':
     min_word_len = 6
     max_word_len = 6
 
-    # words = list_all_words(alphabet, min_word_len, max_word_len)
+    # words = old_list_all_words(alphabet, min_word_len, max_word_len)
     words = ListAllWords(
         alphabet, min_word_len, max_word_len, reduce_to_str=True
     )
