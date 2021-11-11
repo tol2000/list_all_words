@@ -3,7 +3,19 @@ from functools import reduce
 
 class ListAllWords:
 
-    def __init__(self, alphabet, min_word_len, max_word_len, reduce_to_str=False, start_from=[]):
+    def __init__(self, alphabet, min_word_len, max_word_len, reduce_to_str=False, start_from=None):
+        """
+
+        :param alphabet:
+        :param min_word_len:
+        :param max_word_len:
+        :param reduce_to_str: return word ['a','b','c'] as string 'abc'
+        :param start_from: word to start from
+            For example: if you have stopped or canceled previous iteration at some word (e.g. 'qwerty'),
+            then simply set this parameter as ['q','w','e','r','t','y'] and ListAllWords
+            will resumes iteration from this word to the end.
+            Thus it applicable if you would like to do a long-time iteration in several stages
+        """
         self.alphabet = alphabet
         self.min_word_len = min_word_len
         self.max_word_len = max_word_len
@@ -13,7 +25,6 @@ class ListAllWords:
         self.max_index = len(self.alphabet) - 1
         self.num_count = self.min_word_len
         self.num = []
-
 
     def __iter__(self):
         return self
@@ -27,7 +38,7 @@ class ListAllWords:
                 if not self.start_from:
                     self.num = [0] * self.num_count
                 else:
-                    # setting num according start_from and recalculating num_counr
+                    # setting num according start_from and recalculating num_count
                     self.num_count = len(self.start_from)
                     self.num = [self.alphabet.index(x) for x in self.start_from]
             res = self.pos_to_symbols(self.num)

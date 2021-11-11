@@ -43,13 +43,13 @@ if __name__ == '__main__':
     alphabet = [a_string[i] for i in range(0, len(a_string))]
     min_word_len = 1
     max_word_len = 6
-    # start_from = ['h']
-    start_from = ['e','e','n','g','s','m']
+    # start_from = [x for x in 'nc']
+    start_from = [x for x in 'eengsm']
 
     # words = old_list_all_words(alphabet, min_word_len, max_word_len)
     words = ListAllWords(
-        alphabet, min_word_len, max_word_len, reduce_to_str=True
-        , start_from=start_from
+        alphabet, min_word_len, max_word_len, reduce_to_str=True,
+        start_from=start_from
     )
     for word_a in words:
         print(word_a)
