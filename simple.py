@@ -1,10 +1,10 @@
 from list_all_words_generator import ListAllWords
 
 for w in enumerate(ListAllWords(
-    alphabet=range(10),
-    min_word_len=3,
-    max_word_len=3,
-    reduce_to_str=False,
+    alphabet=['A', 'B', 'C', 'D'],
+    min_word_len=2,
+    max_word_len=2,
+    reduce_to_str=True,
     start_from=None,
     only_unique=True
 )):
