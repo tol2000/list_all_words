@@ -1,7 +1,7 @@
 from random import randrange
 
 if __name__ == '__main__':
-    print(f'----- Talker :) -----')
+    print(f'----- Kly4ko talker :) -----')
 
     a = "каждый охотник желает знать где сидит фазан сегодня не он лишь может смотреть завтрашний день карл клара украл кораллы кларнет нужно вернуть"
     alphabet = [f'{x}' for x in a.split(' ')]
