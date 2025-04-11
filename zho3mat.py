@@ -18,7 +18,8 @@ if __name__ == '__main__':
     src = []
 
     for word_a in words:
-        print('Getting', word_a, end=chr(13))
+        # print('Getting', word_a, end=chr(13))
+        print('Getting', word_a)
         src.append(word_a)
 
     # with open('out.txt', 'w') as f:
