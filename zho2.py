@@ -12,8 +12,8 @@ if __name__ == '__main__':
         src = alphabet.copy()
         dest = []
         cur = 1
-        max = 4
-        while src and cur <= max:
+        max_i = 4
+        while src and cur <= max_i:
             ind = randrange(0, len(src))
             dest.append(src.pop(ind))
             cur += 1
