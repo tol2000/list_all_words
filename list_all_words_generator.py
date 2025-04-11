@@ -8,6 +8,8 @@ class ListAllWords:
         start_from=None, only_unique=False
     ):
         """
+        Too big min_word_len (>5, especially >7) with combine of only_unique may cause very long execution
+        because of too much loops with this compare condition: if len(self.num) == len(set(self.num))
 
         :param alphabet:
         :param min_word_len:
